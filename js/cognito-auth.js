@@ -106,7 +106,7 @@ var WildRydes = window.WildRydes || {};
 
     /*
      *  Event Handlers
-     */
+     */registerSuccess
 
     $(function onDocReady() {
         $('#signinForm').submit(handleSignin);
@@ -131,8 +131,14 @@ var WildRydes = window.WildRydes || {};
 
     function handleRegister(event) {
         var email = $('#emailInputRegister').val();
-        var password = $('#passwordInputRegister').val();
+        var password = $('#passwordInputRegister').val();registerSuccess
         var password2 = $('#password2InputRegister').val();
+	var name = $('#nameInputRegister').val();
+	var gender = $('#genderInputRegister').val();
+	var phone_number = $('#phone_numberInputRegister').val();
+	var picture = $('#picutreInputRegister').val();
+	
+	console.log('user name is ' + email + name + gender + phone_number + picture);
 
         var onSuccess = function registerSuccess(result) {
             var cognitoUser = result.user;
